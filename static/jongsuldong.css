@@ -1,0 +1,42 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #6699FF;
+    padding: 10px;
+}
+
+.line {
+  margin: auto;
+  width: 74%;
+  background-color: #6699FF;
+  padding: 2px
+}
+
+.empty-space {
+  /*margin: auto;*/
+  padding: 20px
+}

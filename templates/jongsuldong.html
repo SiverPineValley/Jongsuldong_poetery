@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jongsuldong poet</title>
+
+	{% include 'jongsuldong_csv.html' %}
+</head>
+<body>
+
+	<div class="line"></div>
+
+	<div align="center" style="background-color: #99CCFF; margin: auto; height: 100px; width: 70%;">
+		<p>
+			<h3 align="center" style="line-height: 100px">종설동 시인</h3>뉴럴 네트워크를 이용한 세가지 테마의 시 생성
+		</p>
+	</div>
+
+	<div style="padding: 4px"></div>
+
+	<div class="line"></div>
+
+	<div class="empty-space"></div>
+
+	<div class="center">
+	
+		<form method="POST" action="/project">
+			<fieldset>
+				<legend>테마 설정</legend>
+				<input type="radio" name="chk_info" value=0 checked>진중한 시
+				<input type="radio" name="chk_info" value=1>로맨틱한 시
+				<input type="radio" name="chk_info" value=2>유머러스한 시
+			</fieldset>
+			<p>시작 단어를 입력하세요</p>
+			<input type="text" name="prime">
+			<button type="submit">시인에게 전송</button>
+		</form>
+
+		{% if prime == None %}
+			<h5> 입력이 없습니다. </h5>
+		{% else %}
+			<h5> &nbsp&nbsp작성된 시 </h5>
+			<h5> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 시인 : 종설동 시인 </h5>
+			<textarea name="content" cols="80" rows="36" style="font-size: 16px">{{prime}}</textarea>
+			<p> &nbsp&nbsp생성된 시를 원하는 대로 수정해서 복사해 가세요</p>
+		{% endif %}
+	</div>
+
+</body>
+</html>
